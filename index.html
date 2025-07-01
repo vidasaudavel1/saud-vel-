@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Página de vendas...</title>
+    <title>Portal de Vendas Oficial</title>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -16,12 +16,8 @@
       'https://connect.facebook.net/en_US/fbevents.js');
 
       fbq('init', '665024833357518');
-      fbq('track', 'PageView'); // Visualização da página
-      fbq('track', 'InitiateCheckout'); // Início do checkout
-      fbq('track', 'Purchase', { // Compra simulada
-        value: 127.00,
-        currency: 'BRL'
-      });
+      fbq('track', 'PageView');
+      fbq('track', 'InitiateCheckout');
     </script>
 
     <noscript>
@@ -29,16 +25,30 @@
       src="https://www.facebook.com/tr?id=665024833357518&ev=PageView&noscript=1"/>
     </noscript>
 
-    <!-- Redirecionamento com atraso anti-bot -->
+    <!-- Cloaker Anti-Bot + Redirecionamento -->
     <script>
-      setTimeout(function() {
-        window.location.href = "https://app.monetizze.com.br/r/APK25370077/?u=BP81053";
-      }, 2500); // 2.5 segundos
+      fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+          const isBot = ['Facebook', 'Meta', 'Google', 'TikTok'].some(agent =>
+            navigator.userAgent.includes(agent)
+          );
+          if (isBot || data.org.includes("Meta") || data.org.includes("Facebook")) {
+            window.location.href = "https://g1.globo.com"; // Página fake pro bot
+          } else {
+            setTimeout(() => {
+              window.location.href = "https://app.monetizze.com.br/r/APK25370077/?u=BP81053";
+            }, 2500);
+          }
+        });
     </script>
   </head>
   <body>
-    <p style="font-family:sans-serif;text-align:center;margin-top:20%;">
-      Carregando página, aguarde...
+    <h1 style="text-align:center;font-family:sans-serif;">
+      Portal de Vendas Oficial
+    </h1>
+    <p style="text-align:center;font-family:sans-serif;">
+      Redirecionando pra pagina oficial, aguarde...
     </p>
   </body>
 </html>

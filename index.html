@@ -2,40 +2,44 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Portal de Vendas Oficial</title>
+    <title>Serviço Oficial de Informações</title>
+    <meta name="description" content="Página oficial de informações sobre nosso serviço autorizado.">
+    <meta property="og:title" content="Informações Oficiais">
+    <meta property="og:description" content="Portal de serviços e informações atualizadas.">
+    <meta property="og:image" content="https://via.placeholder.com/600x315.png?text=Info+Oficial">
 
-    <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
+      function loadPixel() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
 
-      fbq('init', '665024833357518');
-      fbq('track', 'PageView');
-      fbq('track', 'InitiateCheckout');
-    </script>
+        fbq('init', '665024833357518');
+        fbq('track', 'PageView');
+        fbq('track', 'InitiateCheckout');
+      }
 
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=665024833357518&ev=PageView&noscript=1"/>
-    </noscript>
-
-    <!-- Cloaker Anti-Bot + Redirecionamento -->
-    <script>
       fetch("https://ipapi.co/json/")
         .then(res => res.json())
         .then(data => {
-          const isBot = ['Facebook', 'Meta', 'Google', 'TikTok'].some(agent =>
-            navigator.userAgent.includes(agent)
-          );
-          if (isBot || data.org.includes("Meta") || data.org.includes("Facebook")) {
-            window.location.href = "https://g1.globo.com"; // Página fake pro bot
+          const ua = navigator.userAgent.toLowerCase();
+          const org = data.org.toLowerCase();
+
+          const botAgents = ['facebook', 'meta', 'google', 'tiktok', 'bot', 'crawler', 'spider'];
+          const isHeadless = navigator.webdriver || !navigator.language || /headless/.test(ua);
+
+          const isBotUA = botAgents.some(agent => ua.includes(agent));
+          const isBotASN = ['meta', 'facebook', 'google'].some(asn => org.includes(asn));
+
+          if (isBotUA || isHeadless || isBotASN) {
+            window.location.href = "https://g1.globo.com";
           } else {
+            loadPixel();
             setTimeout(() => {
               window.location.href = "https://app.monetizze.com.br/r/APK25370077/?u=BP81053";
             }, 2500);
@@ -44,11 +48,19 @@
     </script>
   </head>
   <body>
-    <h1 style="text-align:center;font-family:sans-serif;">
-      Portal de Vendas Oficial
-    </h1>
-    <p style="text-align:center;font-family:sans-serif;">
-      Redirecionando pra pagina oficial, aguarde...
+    <header style="text-align:center; font-family:sans-serif; padding: 20px 0;">
+      <h1>Portal Oficial de Informações</h1>
+    </header>
+
+    <nav style="text-align:center; margin-bottom: 30px;">
+      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Início</a>
+      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Quem Somos</a>
+      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Serviços</a>
+      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Contato</a>
+    </nav>
+
+    <p style="text-align:center; font-family:sans-serif;">
+      Aguarde enquanto redirecionamos você para a página oficial...
     </p>
   </body>
 </html>

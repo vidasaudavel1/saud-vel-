@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Informações Oficiais</title>
-    <meta name="title" content="Informações Oficiais">
-    <meta name="description" content="Portal de serviços e informações atualizadas.">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desafio Detox 30 Dias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffefc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #2ecc71;
+    }
+    h2 {
+      color: #27ae60;
+    }
+    .btn {
+      display: inline-block;
+      background: #27ae60;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #219150;
+    }
+    .highlight {
+      background: #f7f7f7;
+      padding: 15px;
+      border-left: 5px solid #2ecc71;
+      margin: 20px 0;
+    }
+    .bump {
+      background: #e9fcec;
+      padding: 20px;
+      border: 2px dashed #27ae60;
+      margin-top: 30px;
+    }
+    .bump strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💚 Em 30 dias, seu corpo pode ser outro</h1>
+    <p>Se você tá se sentindo inchada, cansada, sem energia e com dificuldade pra emagrecer... esse é o desafio que vai virar a chave.</p>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vidasaudavel1.github.io/saud-vel-/" />
-    <meta property="og:title" content="Informações Oficiais" />
-    <meta property="og:description" content="Portal de serviços e informações atualizadas." />
-    <meta property="og:image" content="https://vidasaudavel1.github.io/saud-vel-/2cd1abe0-5013-4525-925f-137641ff762f.jpeg" />
+    <div class="highlight">
+      <p><strong>📘 O que você recebe:</strong></p>
+      <ul>
+        <li>Ebook com 30 receitas detox testadas</li>
+        <li>Lista de treinos fáceis pra fazer em casa (sem equipamento!)</li>
+        <li>Plano passo a passo para eliminar toxinas e secar de forma natural</li>
+      </ul>
+    </div>
 
-    <script>
-      function loadPixel() {
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+    <h2>Resultados reais de quem já passou pelo desafio:</h2>
+    <p>Mais de 2.000 mulheres já fizeram o desafio e relatam:</p>
+    <ul>
+      <li>Menos inchaço e retenção</li>
+      <li>Pele mais limpa e viçosa</li>
+      <li>Até 6kg eliminados sem academia</li>
+    </ul>
 
-        fbq('init', '665024833357518');
-        fbq('track', 'PageView');
-        fbq('track', 'InitiateCheckout');
-        fbq('trackCustom', 'HumanoConfirmado');
-      }
+    <div class="bump">
+      <strong>🎁 Upgrade exclusivo por tempo limitado:</strong>
+      Adicione ao seu desafio o <b>Plano Alimentar Profissional</b> com nutricionista que vai potencializar seus resultados em 3x.
+      <br><br>
+      ✅ Combo completo + bônus surpresa liberado por tempo limitado!
+    </div>
 
-      fetch("https://ipapi.co/json/")
-        .then(res => res.json())
-        .then(data => {
-          const ua = navigator.userAgent.toLowerCase();
-          const org = data.org.toLowerCase();
+    <a class="btn" href="https://SEU_LINK_DA_KIRVANO_AQUI" target="_blank">
+      QUERO COMEÇAR MEU DESAFIO AGORA 💪
+    </a>
 
-          const botAgents = ['facebook', 'meta', 'google', 'tiktok', 'bot', 'crawler', 'spider'];
-          const isHeadless = navigator.webdriver || !navigator.language || /headless/.test(ua);
-
-          const isBotUA = botAgents.some(agent => ua.includes(agent));
-          const isBotASN = ['meta', 'facebook', 'google'].some(asn => org.includes(asn));
-
-          if (isBotUA || isHeadless || isBotASN) {
-            window.location.href = "https://g1.globo.com";
-          } else {
-            loadPixel();
-            setTimeout(() => {
-              window.location.href = "https://app.monetizze.com.br/r/APK25370077/?u=BP81053";
-            }, 2500);
-          }
-        });
-    </script>
-  </head>
-  <body>
-    <header style="text-align:center; font-family:sans-serif; padding: 20px 0;">
-      <h1>Portal Oficial de Informações</h1>
-    </header>
-
-    <nav style="text-align:center; margin-bottom: 30px;">
-      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Início</a>
-      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Quem Somos</a>
-      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Serviços</a>
-      <a href="#" style="margin:0 15px; text-decoration:none; color:#333;">Contato</a>
-    </nav>
-
-    <p style="text-align:center; font-family:sans-serif;">
-      Aguarde enquanto redirecionamos você para a página oficial...
+    <p style="font-size: 13px; color: #777; margin-top: 40px;">
+      *Este produto não substitui o acompanhamento profissional. Resultados podem variar.
     </p>
-  </body>
+  </div>
+</body>
 </html>

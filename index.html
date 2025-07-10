@@ -4,31 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desafio Detox 30 Dias</title>
-
-  <!-- SEO e Open Graph -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="description" content="Transforme seu corpo em 30 dias com receitas detox e treinos caseiros. Resultados reais, naturais e rápidos!">
   <meta property="og:title" content="Desafio Detox 30 Dias">
   <meta property="og:description" content="Transforme seu corpo com receitas detox e treinos rápidos em casa.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1601314167091-c6d59d351ec6">
   <meta property="og:url" content="https://seusite.com">
   <meta name="twitter:card" content="summary_large_image">
-
   <style>
+    :root {
+      --main: #c8beb5;
+      --green: #00b894;
+      --green-dark: #019270;
+      --gray-light: #f7f7f7;
+      --text-dark: #2d3436;
+      --accent-red: #ff7675;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f5f8f4;
-      color: #2c3e50;
+      color: var(--text-dark);
       line-height: 1.6;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1601314167091-c6d59d351ec6') center/cover no-repeat;
+      background: url('banner.webp') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 120px 20px;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
     header p {
@@ -37,23 +44,23 @@
       margin: auto;
     }
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 30px;
     }
     section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
     .benefits ul {
       list-style: none;
       padding: 0;
     }
     .benefits li {
-      background: #ecf0f1;
+      background: var(--gray-light);
       padding: 15px;
-      border-left: 5px solid #27ae60;
+      border-left: 5px solid var(--green);
       margin-bottom: 15px;
-      font-weight: bold;
+      font-weight: 600;
     }
     .testimonials {
       background: #ffffff;
@@ -67,7 +74,7 @@
     }
     .order-bump {
       background: #e8fbe9;
-      border-left: 6px solid #2ecc71;
+      border-left: 6px solid var(--green);
       padding: 20px;
       margin-top: 30px;
       border-radius: 8px;
@@ -80,7 +87,7 @@
       margin-top: 40px;
     }
     .cta a {
-      background-color: #27ae60;
+      background-color: var(--green);
       color: white;
       padding: 15px 40px;
       font-size: 1.2rem;
@@ -91,7 +98,7 @@
       display: inline-block;
     }
     .cta a:hover {
-      background-color: #219150;
+      background-color: var(--green-dark);
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -100,12 +107,12 @@
     }
     .timer-box {
       background: #fef2f2;
-      color: #c0392b;
+      color: var(--accent-red);
       padding: 15px;
       text-align: center;
       font-size: 18px;
       margin-bottom: 30px;
-      border: 1px solid #e74c3c;
+      border: 1px solid var(--accent-red);
       border-radius: 6px;
     }
     footer {
@@ -114,8 +121,6 @@
       font-size: 0.9rem;
       color: #888;
     }
-
-    /* Sticky CTA mobile */
     @media (max-width: 600px) {
       header h1 { font-size: 2rem; }
       .cta a {
@@ -126,7 +131,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background: #27ae60;
+        background: var(--green);
         text-align: center;
         padding: 15px;
         z-index: 9999;
@@ -146,8 +151,7 @@
     <p>Transforme seu corpo e mente em 30 dias com receitas práticas e treinos que cabem no seu dia.</p>
   </header>
 
-  <div class="container">
-
+  <div class="container" data-aos="fade-up">
     <div class="timer-box">
       ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
     </div>
@@ -186,21 +190,21 @@
     </section>
 
     <section class="cta">
-      <a href="https://SEU_LINK_DA_KIRVANO_AQUI" target="_blank">QUERO COMEÇAR AGORA</a>
+      <a href="https://pay.kirvano.com/c56a478d-6f5d-4359-84ac-e9feb07254c1" target="_blank">QUERO COMEÇAR AGORA</a>
     </section>
   </div>
 
-  <!-- Sticky CTA mobile -->
   <div class="sticky-cta">
-    <a href="https://SEU_LINK_DA_KIRVANO_AQUI" target="_blank">💚 Começar Desafio Agora</a>
+    <a href="https://pay.kirvano.com/c56a478d-6f5d-4359-84ac-e9feb07254c1" target="_blank">💚 Começar Desafio Agora</a>
   </div>
 
   <footer>
     *Este material não substitui acompanhamento profissional. Resultados podem variar de pessoa para pessoa.
   </footer>
 
-  <!-- Contador JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     function startCountdown(duration, display) {
       let timer = duration, minutes, seconds;
       setInterval(function () {
@@ -212,7 +216,6 @@
         if (--timer < 0) timer = duration;
       }, 1000);
     }
-
     window.onload = function () {
       const fiveMinutes = 60 * 5;
       const display = document.querySelector('#timer');

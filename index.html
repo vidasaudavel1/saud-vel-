@@ -2,175 +2,186 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desafio 30 Dias Funcional</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://seucdn.com/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="description" content="Plano natural para transformar sua rotina em 30 dias, sem loucura, sem promessas vazias.">
+  <meta property="og:title" content="Desafio 30 Dias Funcional">
+  <meta property="og:description" content="Plano funcional que já ajudou +12 mil mulheres. Descubra como aplicar em casa.">
+  <meta property="og:image" content="https://seucdn.com/banner-og.jpg">
+  <meta property="og:url" content="https://seusite.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://seucdn.com/banner-og.jpg">
 
   <style>
     :root {
-      --main: #f0ebe3;
-      --green: #00b894;
-      --green-dark: #019270;
-      --gray-light: #fafafa;
-      --text-dark: #2d3436;
-      --accent-red: #ff7675;
+      --main: #c8beb5;
+      --accent-red: #e74c3c;
+      --accent-green: #27ae60;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Outfit', sans-serif;
-      background-color: var(--gray-light);
-      color: var(--text-dark);
-      line-height: 1.7;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
     }
-
     header {
-      background-color: var(--green);
-      color: white;
+      background-color: var(--accent-green);
+      color: #fff;
+      padding: 40px 20px;
       text-align: center;
-      padding: 120px 20px 80px;
+      border-radius: 0 0 20px 20px;
     }
-
-    header h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      margin-bottom: 15px;
+    header h1, header p {
+      color: #fff;
+      margin: 0 0 10px;
     }
-
-    header p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 960px;
+    main, section, footer {
+      padding: 20px;
+      max-width: 800px;
       margin: auto;
-      padding: 60px 20px;
     }
-
-    section {
-      margin-bottom: 60px;
+    h2, h3 {
+      color: #222;
     }
-
-    .intro p, .benefits ul, .order-bump ul {
-      font-size: 1rem;
+    .container {
+      padding: 20px;
     }
-
-    .benefits ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .benefits li {
-      background: white;
-      padding: 15px;
-      border-left: 5px solid var(--green);
-      margin-bottom: 12px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    .testimonials, .order-bump {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-
-    .testimonials p {
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .order-bump h3 {
-      margin-bottom: 15px;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .cta a {
-      background-color: var(--green);
-      color: white;
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-
-    .cta a:hover {
-      background-color: var(--green-dark);
-      transform: scale(1.03);
-    }
-
     .timer-box {
-      background: #fef2f2;
-      color: var(--accent-red);
-      padding: 15px;
+      background: #f9e79f;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 20px 0;
       text-align: center;
-      font-size: 1rem;
-      margin-bottom: 30px;
-      border: 1px solid var(--accent-red);
-      border-radius: 6px;
+      font-weight: bold;
     }
-
     #notif {
-      background:#fff3cd;
-      padding:10px;
-      border-left:5px solid #ffb347;
-      margin-bottom:20px;
-      font-size:14px;
-      display:none;
-      border-radius: 6px;
-    }
-
-    .sticky-cta {
+      background: #fff3cd;
+      padding: 10px;
+      border-left: 5px solid #ffb347;
+      margin-bottom: 20px;
+      font-size: 14px;
       display: none;
     }
-
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #999;
-    }
-
-    @media (max-width: 600px) {
-      .cta a {
-        font-size: 1rem;
-        padding: 12px 25px;
-      }
-      .sticky-cta {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: var(--green);
-        text-align: center;
-        padding: 15px;
-        z-index: 9999;
-        box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
-      }
-      .sticky-cta a {
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-      }
+      font-size: 12px;
+      color: #888;
     }
   </style>
 </head>
 
-  
+<body>
+  <main>
+    <header>
+      <h1>Desafio 30 Dias Funcional</h1>
+      <p>Renove sua rotina com hábitos leves e naturais, no seu ritmo.</p>
+    </header>
+
+    <div class="container" data-aos="fade-up">
+
+      <div id="notif">
+        <span id="notif-text">Usuária garantiu acesso há poucos minutos</span>
+      </div>
+
+      <div class="timer-box">
+        ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
+      </div>
+
+      <section class="intro" aria-label="introdução">
+        <h2>Você recebe:</h2>
+        <p>📘 Ebook com plano funcional de 30 dias<br>
+           🏋️‍♀️ Rotina simples com práticas leves<br>
+           ✅ Estratégia natural pra renovar seu bem-estar</p>
+      </section>
+
+      <section class="benefits" aria-label="benefícios">
+        <h2>Benefícios</h2>
+        <ul>
+          <li>Resultados visíveis em poucos dias</li>
+          <li>Mais disposição sem suplementos artificiais</li>
+          <li>Corpo mais leve com práticas naturais</li>
+          <li>Pele e intestino em sintonia</li>
+          <li>Mais energia no dia a dia</li>
+          <li>Corpo mais equilibrado sem esforço</li>
+        </ul>
+      </section>
+
+      <section class="testimonials" aria-label="depoimentos">
+        <h2>Transformações reais</h2>
+        <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3707.jpeg" alt="Antes e depois Ana" loading="lazy">
+        <p>"Em 15 dias me senti mais leve e meu corpo respondeu muito bem!" – <strong>Ana, 29 anos</strong></p>
+        <p>"Não é milagre, mas me ajudou a destravar o que tava parado há meses." – <strong>Cláudia, 34 anos</strong></p>
+      </section>
+
+      <section class="order-bump" aria-label="bônus">
+        <h3>🎁 Bônus Profissional:</h3>
+        <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3709.jpeg" alt="Plano aprovado" loading="lazy" style="width: 100px;">
+        <p>Inclua o <strong>Plano Nutricional Complementar</strong> com cardápios ajustados, receitas extras e checklist saudável.</p>
+        <ul>
+          <li>Cardápio 100% alinhado ao ebook</li>
+          <li>Receitas anti-inchaço exclusivas</li>
+          <li>Checklist de hábitos saudáveis</li>
+          <li>Lista de mercado pronta pra imprimir</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <footer>
+      *Este conteúdo tem fins informativos. Consulte especialistas para suporte individual.
+    </footer>
+
+    <!-- Pixel Invisível para cloaking -->
+    <img src="https://seu-cloak.com/track.gif?lead=true" width="1" height="1" style="display:none;" alt="">
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Timer looping
+    let timer = 300;
+    function updateCountdown() {
+      const minutes = Math.floor(timer / 60);
+      const seconds = timer % 60;
+      document.getElementById("timer").textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+      if (timer > 0) {
+        timer--;
+      } else {
+        timer = 300;
+      }
+      setTimeout(updateCountdown, 1000);
+    }
+    updateCountdown();
+
+    // Geolocalização fake notificação
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const cidade = data.city || "sua região";
+        document.getElementById("notif-text").innerText = `Usuária de ${cidade} garantiu acesso há ${Math.floor(Math.random()*3)+1} minutos`;
+        document.getElementById("notif").style.display = "block";
+      });
+
+    // Cloaking visual (anti-bot)
+    const isBot = /bot|crawler|spider|crawling/i.test(navigator.userAgent);
+    if (isBot) {
+      document.body.innerHTML = '<h1>Conteúdo indisponível no momento.</h1>';
+    }
+  </script>
+</body>
+</html>

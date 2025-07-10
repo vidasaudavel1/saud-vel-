@@ -2,99 +2,130 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desafio 30 Dias</title>
-  <link rel="icon" href="https://seucdn.com/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Meta Social -->
-  <meta name="description" content="Plano natural para transformar sua rotina em 30 dias, sem loucura, sem promessas vazias.">
-  <meta property="og:title" content="Desafio 30 Dias Funcional">
-  <meta property="og:description" content="Plano funcional que já ajudou +12 mil mulheres. Descubra como aplicar em casa.">
-  <meta property="og:image" content="https://seucdn.com/banner-og.jpg">
-  <meta property="og:url" content="https://seusite.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://seucdn.com/banner-og.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio 30 Dias Funcional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --main: #c8beb5;
+      --main: #f0ebe3;
       --green: #00b894;
       --green-dark: #019270;
-      --gray-light: #f7f7f7;
+      --gray-light: #fafafa;
       --text-dark: #2d3436;
       --accent-red: #ff7675;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f5f8f4;
-      color: var(--text-dark);
-      line-height: 1.6;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--gray-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
     header {
-      background: url('banner.webp') center/cover no-repeat;
+      background-color: var(--green);
       color: white;
       text-align: center;
-      padding: 120px 20px;
+      padding: 120px 20px 80px;
     }
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; max-width: 600px; margin: auto; }
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .container {
       max-width: 960px;
       margin: auto;
-      padding: 60px 30px;
+      padding: 60px 20px;
     }
-    section { margin-bottom: 60px; }
-    .benefits ul { list-style: none; padding: 0; }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .intro p, .benefits ul, .order-bump ul {
+      font-size: 1rem;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
     .benefits li {
-      background: var(--gray-light);
+      background: white;
       padding: 15px;
       border-left: 5px solid var(--green);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      border-radius: 6px;
       font-weight: 600;
     }
+
     .testimonials, .order-bump {
-      background: #ffffff;
+      background: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
-    .testimonials p { font-style: italic; margin-bottom: 10px; }
-    .order-bump ul { margin-top: 10px; }
-    .order-bump h3 { margin-bottom: 10px; }
+
+    .testimonials p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .order-bump h3 {
+      margin-bottom: 15px;
+    }
+
     .cta {
       text-align: center;
       margin-top: 40px;
     }
+
     .cta a {
       background-color: var(--green);
       color: white;
       padding: 15px 40px;
       font-size: 1.2rem;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-      animation: pulse 1.5s infinite;
-      display: inline-block;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
     }
-    .cta a:hover { background-color: var(--green-dark); }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+
+    .cta a:hover {
+      background-color: var(--green-dark);
+      transform: scale(1.03);
     }
+
     .timer-box {
       background: #fef2f2;
       color: var(--accent-red);
       padding: 15px;
       text-align: center;
-      font-size: 18px;
+      font-size: 1rem;
       margin-bottom: 30px;
       border: 1px solid var(--accent-red);
       border-radius: 6px;
     }
+
     #notif {
       background:#fff3cd;
       padding:10px;
@@ -102,20 +133,27 @@
       margin-bottom:20px;
       font-size:14px;
       display:none;
+      border-radius: 6px;
     }
+
+    .sticky-cta {
+      display: none;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #888;
+      color: #999;
     }
+
     @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
       .cta a {
         font-size: 1rem;
         padding: 12px 25px;
       }
       .sticky-cta {
+        display: block;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -123,119 +161,16 @@
         text-align: center;
         padding: 15px;
         z-index: 9999;
+        box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
       }
       .sticky-cta a {
         color: white;
-        font-size: 18px;
+        font-size: 1.1rem;
+        font-weight: 600;
         text-decoration: none;
       }
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <h1>Desafio 30 Dias Funcional</h1>
-    <p>Renove sua rotina com hábitos leves e naturais, no seu ritmo.</p>
-  </header>
-
-  <div class="container" data-aos="fade-up">
-
-    <!-- Gatilho de notificação fake -->
-    <div id="notif">
-      <span id="notif-text">Usuária de SP garantiu acesso há 3 minutos</span>
-    </div>
-
-    <div class="timer-box">
-      ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
-    </div>
-
-    <section class="intro">
-      <h2>Você recebe:</h2>
-      <p>📘 Ebook com plano funcional de 30 dias<br>
-         🏋️‍♀️ Rotina simples com práticas leves<br>
-         ✅ Estratégia natural pra renovar seu bem-estar</p>
-    </section>
-
-    <section class="benefits">
-      <h2>Benefícios</h2>
-      <ul>
-        <li>Leveza nos primeiros dias</li>
-        <li>Mais energia no dia a dia</li>
-        <li>Corpo mais equilibrado sem esforço</li>
-        <li>Melhora na rotina e no descanso</li>
-      </ul>
-    </section>
-
-    <section class="testimonials">
-      <h2>Transformações reais</h2>
-      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3707.jpeg" alt="Antes e Depois Ana" loading="lazy" style="width:100%; border-radius:8px; margin-bottom: 20px;">
-      <p>"Em 15 dias me senti mais leve e meu corpo respondeu muito bem!" – <strong>Ana, 29 anos</strong></p>
-      <p>"Não é milagre, mas me ajudou a destravar o que tava parado há meses." – <strong>Cláudia, 34 anos</strong></p>
-    </section>
-
-    <section class="order-bump">
-      <h3>🎁 Bônus Profissional:</h3>
-      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3709.jpeg" alt="Aprovado por Nutricionistas" loading="lazy" style="width: 100px;">
-      <p>Inclua o <strong>Plano Nutricional Complementar</strong> com cardápios ajustados, receitas extras e checklist saudável.</p>
-      <ul>
-        <li>Cardápio 100% alinhado ao ebook</li>
-        <li>Dicas anti retenção e lista de mercado</li>
-        <li>PDF bônus com receitas extras</li>
-      </ul>
-    </section>
-
-    <section class="cta">
-      <a href="https://pay.kirvano.com/c56a478d-6f5d-4359-84ac-e9feb07254c1" target="_blank">QUERO COMEÇAR AGORA</a>
-    </section>
-  </div>
-
-  <div class="sticky-cta">
-    <a href="https://pay.kirvano.com/c56a478d-6f5d-4359-84ac-e9feb07254c1" target="_blank">💚 Começar Desafio Agora</a>
-  </div>
-
-  <footer>
-    *Este conteúdo tem fins informativos. Consulte especialistas para suporte individual.
-  </footer>
-
-  <!-- Pixel Invisível -->
-  <img src="https://seu-cloak.com/track.gif?lead=true" width="1" height="1" style="display:none;" />
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    // Timer persistente
-    window.onload = function () {
-      let deadline = localStorage.getItem('detoxTimer') || (Date.now() + 5 * 60000);
-      localStorage.setItem('detoxTimer', deadline);
-      let display = document.querySelector('#timer');
-
-      function updateCountdown() {
-        let now = Date.now();
-        let diff = deadline - now;
-        if (diff <= 0) {
-          display.textContent = "00:00";
-        } else {
-          let minutes = Math.floor(diff / 60000);
-          let seconds = Math.floor((diff % 60000) / 1000);
-          display.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-          setTimeout(updateCountdown, 1000);
-        }
-      }
-      updateCountdown();
-
-      // Notificação fake
-      const locais = ["SP", "RJ", "BH", "DF", "Salvador", "Curitiba"];
-      function simulaCompra() {
-        let cidade = locais[Math.floor(Math.random() * locais.length)];
-        document.getElementById("notif-text").innerText = `Usuária de ${cidade} garantiu acesso há ${Math.floor(Math.random()*4)+1} minutos`;
-        document.getElementById("notif").style.display = "block";
-      }
-      setTimeout(simulaCompra, 4000);
-    };
-  </script>
-
-</body>
-</html>
+  

@@ -1,96 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desafio Detox 30 Dias</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffefc;
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 20px;
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8f4;
+      color: #2c3e50;
+      line-height: 1.6;
     }
-    h1 {
-      color: #2ecc71;
-    }
-    h2 {
-      color: #27ae60;
-    }
-    .btn {
-      display: inline-block;
-      background: #27ae60;
+
+    header {
+      background: url('https://images.unsplash.com/photo-1601314167091-c6d59d351ec6') center/cover no-repeat;
       color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
-      margin-top: 30px;
-      border-radius: 5px;
+      text-align: center;
+      padding: 80px 20px;
     }
-    .btn:hover {
-      background: #219150;
-    }
-    .highlight {
-      background: #f7f7f7;
-      padding: 15px;
-      border-left: 5px solid #2ecc71;
-      margin: 20px 0;
-    }
-    .bump {
-      background: #e9fcec;
-      padding: 20px;
-      border: 2px dashed #27ae60;
-      margin-top: 30px;
-    }
-    .bump strong {
-      display: block;
-      font-size: 18px;
+
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits li {
+      background: #ecf0f1;
+      padding: 15px;
+      border-left: 5px solid #27ae60;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .testimonials {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .testimonials p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .order-bump {
+      background: #e8fbe9;
+      border-left: 6px solid #2ecc71;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+    .order-bump h3 {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background-color: #27ae60;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #219150;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .cta a {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Desafio Detox 30 Dias</h1>
+    <p>Transforme seu corpo e mente em 30 dias com receitas práticas e treinos que cabem no seu dia.</p>
+  </header>
+
   <div class="container">
-    <h1>💚 Em 30 dias, seu corpo pode ser outro</h1>
-    <p>Se você tá se sentindo inchada, cansada, sem energia e com dificuldade pra emagrecer... esse é o desafio que vai virar a chave.</p>
+    <section class="intro">
+      <h2>Receba agora:</h2>
+      <p>📘 Ebook com 30 receitas detox<br>
+         🏋️‍♀️ Treinos caseiros e rápidos<br>
+         ✅ Plano completo para desinchar e acelerar o metabolismo</p>
+    </section>
 
-    <div class="highlight">
-      <p><strong>📘 O que você recebe:</strong></p>
+    <section class="benefits">
+      <h2>Benefícios do Desafio</h2>
       <ul>
-        <li>Ebook com 30 receitas detox testadas</li>
-        <li>Lista de treinos fáceis pra fazer em casa (sem equipamento!)</li>
-        <li>Plano passo a passo para eliminar toxinas e secar de forma natural</li>
+        <li>Desinchaço em menos de 5 dias</li>
+        <li>Mais energia e disposição</li>
+        <li>Perda de até 6kg sem academia</li>
+        <li>Melhora na pele, intestino e sono</li>
       </ul>
-    </div>
+    </section>
 
-    <h2>Resultados reais de quem já passou pelo desafio:</h2>
-    <p>Mais de 2.000 mulheres já fizeram o desafio e relatam:</p>
-    <ul>
-      <li>Menos inchaço e retenção</li>
-      <li>Pele mais limpa e viçosa</li>
-      <li>Até 6kg eliminados sem academia</li>
-    </ul>
+    <section class="testimonials">
+      <h2>Transformações reais</h2>
+      <p>"Em 15 dias perdi 4kg só com o plano e me senti muito mais leve!" – <strong>Ana, 29 anos</strong></p>
+      <p>"Achei que era só mais um eBook, mas funcionou de verdade!" – <strong>Cláudia, 34 anos</strong></p>
+    </section>
 
-    <div class="bump">
-      <strong>🎁 Upgrade exclusivo por tempo limitado:</strong>
-      Adicione ao seu desafio o <b>Plano Alimentar Profissional</b> com nutricionista que vai potencializar seus resultados em 3x.
-      <br><br>
-      ✅ Combo completo + bônus surpresa liberado por tempo limitado!
-    </div>
+    <section class="order-bump">
+      <h3>🎁 Oferta especial por tempo limitado:</h3>
+      <p>Adicione ao seu desafio o <strong>Plano Alimentar Profissional</strong> feito por nutricionista para turbinar seus resultados.</p>
+      <ul>
+        <li>Cardápio 100% adaptado ao eBook</li>
+        <li>Dicas anti-retenção</li>
+        <li>Bônus: PDF com receitas bônus e lista de mercado</li>
+      </ul>
+    </section>
 
-    <a class="btn" href="https://SEU_LINK_DA_KIRVANO_AQUI" target="_blank">
-      QUERO COMEÇAR MEU DESAFIO AGORA 💪
-    </a>
-
-    <p style="font-size: 13px; color: #777; margin-top: 40px;">
-      *Este produto não substitui o acompanhamento profissional. Resultados podem variar.
-    </p>
+    <section class="cta">
+      <a href="https://SEU_LINK_DA_KIRVANO_AQUI" target="_blank">QUERO COMEÇAR AGORA</a>
+    </section>
   </div>
+
+  <footer>
+    *Este material não substitui acompanhamento profissional. Resultados podem variar de pessoa para pessoa.
+  </footer>
+
 </body>
 </html>

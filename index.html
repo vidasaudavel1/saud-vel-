@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desafio 30 Dias</title>
+  <link rel="icon" href="https://seucdn.com/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <meta name="description" content="Plano 100% natural para redefinir seu corpo e bem-estar em 30 dias.">
-  <meta property="og:title" content="Desafio 30 Dias Natural">
-  <meta property="og:description" content="Resultados visíveis em pouco tempo com plano funcional e saudável.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1601314167091-c6d59d351ec6">
+
+  <!-- Meta Social -->
+  <meta name="description" content="Plano natural para transformar sua rotina em 30 dias, sem loucura, sem promessas vazias.">
+  <meta property="og:title" content="Desafio 30 Dias Funcional">
+  <meta property="og:description" content="Plano funcional que já ajudou +12 mil mulheres. Descubra como aplicar em casa.">
+  <meta property="og:image" content="https://seucdn.com/banner-og.jpg">
   <meta property="og:url" content="https://seusite.com">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://seucdn.com/banner-og.jpg">
+
   <style>
     :root {
       --main: #c8beb5;
@@ -90,6 +95,14 @@
       border: 1px solid var(--accent-red);
       border-radius: 6px;
     }
+    #notif {
+      background:#fff3cd;
+      padding:10px;
+      border-left:5px solid #ffb347;
+      margin-bottom:20px;
+      font-size:14px;
+      display:none;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -123,47 +136,52 @@
 
   <header>
     <h1>Desafio 30 Dias Funcional</h1>
-    <p>Renove sua rotina com hábitos naturais e funcionais, no seu tempo.</p>
+    <p>Renove sua rotina com hábitos leves e naturais, no seu ritmo.</p>
   </header>
 
   <div class="container" data-aos="fade-up">
+
+    <!-- Gatilho de notificação fake -->
+    <div id="notif">
+      <span id="notif-text">Usuária de SP garantiu acesso há 3 minutos</span>
+    </div>
+
     <div class="timer-box">
       ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
     </div>
 
     <section class="intro">
-      <h2>Receba agora:</h2>
-      <p>📘 Ebook com plano alimentar funcional<br>
-         🏋️‍♀️ Rotina de treinos simples em casa<br>
-         ✅ Estratégia completa para reduzir retenção e aumentar energia</p>
+      <h2>Você recebe:</h2>
+      <p>📘 Ebook com plano funcional de 30 dias<br>
+         🏋️‍♀️ Rotina simples com práticas leves<br>
+         ✅ Estratégia natural pra renovar seu bem-estar</p>
     </section>
 
     <section class="benefits">
-      <h2>Benefícios do Desafio</h2>
+      <h2>Benefícios</h2>
       <ul>
-        <li>Resultados visíveis em poucos dias</li>
-        <li>Mais disposição sem suplementos artificiais</li>
-        <li>Corpo mais leve com práticas naturais</li>
-        <li>Pele e intestino em sintonia</li>
+        <li>Leveza nos primeiros dias</li>
+        <li>Mais energia no dia a dia</li>
+        <li>Corpo mais equilibrado sem esforço</li>
+        <li>Melhora na rotina e no descanso</li>
       </ul>
     </section>
 
     <section class="testimonials">
       <h2>Transformações reais</h2>
-      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3707.jpeg" alt="Antes e Depois Ana" style="width:100%; border-radius:8px; margin-bottom: 20px;">
-      <p>"Em 15 dias me senti mais leve, com mais energia e menos inchaço!" – <strong>Ana, 29 anos</strong></p>
-      <p>"Achei que era só mais um plano, mas é real. Mudou meu ritmo!" – <strong>Cláudia, 34 anos</strong></p>
+      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3707.jpeg" alt="Antes e Depois Ana" loading="lazy" style="width:100%; border-radius:8px; margin-bottom: 20px;">
+      <p>"Em 15 dias me senti mais leve e meu corpo respondeu muito bem!" – <strong>Ana, 29 anos</strong></p>
+      <p>"Não é milagre, mas me ajudou a destravar o que tava parado há meses." – <strong>Cláudia, 34 anos</strong></p>
     </section>
 
     <section class="order-bump">
-      <h3>🎁 Upgrade turbo + Bônus:</h3>
-      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3709.jpeg" alt="Aprovado por Nutricionistas" style="width: 100px;">
-      <p>Adicione o <strong>Plano Profissional</strong> elaborado com base em orientações de especialistas:</p>
+      <h3>🎁 Bônus Profissional:</h3>
+      <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3709.jpeg" alt="Aprovado por Nutricionistas" loading="lazy" style="width: 100px;">
+      <p>Inclua o <strong>Plano Nutricional Complementar</strong> com cardápios ajustados, receitas extras e checklist saudável.</p>
       <ul>
-        <li>Cardápio ajustado ao desafio</li>
-        <li>Receitas anti-inchaço exclusivas</li>
-        <li>Checklist de hábitos saudáveis</li>
-        <li>Lista de mercado pronta pra imprimir</li>
+        <li>Cardápio 100% alinhado ao ebook</li>
+        <li>Dicas anti retenção e lista de mercado</li>
+        <li>PDF bônus com receitas extras</li>
       </ul>
     </section>
 
@@ -177,12 +195,13 @@
   </div>
 
   <footer>
-    *Este material é informativo e não substitui orientações profissionais.
+    *Este conteúdo tem fins informativos. Consulte especialistas para suporte individual.
   </footer>
 
   <!-- Pixel Invisível -->
   <img src="https://seu-cloak.com/track.gif?lead=true" width="1" height="1" style="display:none;" />
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -206,6 +225,15 @@
         }
       }
       updateCountdown();
+
+      // Notificação fake
+      const locais = ["SP", "RJ", "BH", "DF", "Salvador", "Curitiba"];
+      function simulaCompra() {
+        let cidade = locais[Math.floor(Math.random() * locais.length)];
+        document.getElementById("notif-text").innerText = `Usuária de ${cidade} garantiu acesso há ${Math.floor(Math.random()*4)+1} minutos`;
+        document.getElementById("notif").style.display = "block";
+      }
+      setTimeout(simulaCompra, 4000);
     };
   </script>
 

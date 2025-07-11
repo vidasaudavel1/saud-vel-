@@ -79,6 +79,22 @@
       font-size: 12px;
       color: #888;
     }
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-green);
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(39, 174, 96, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(39, 174, 96, 0.5);
+    }
   </style>
 </head>
 
@@ -91,14 +107,25 @@
 
     <div class="container" data-aos="fade-up">
 
+      <!-- Notificação dinâmica -->
       <div id="notif">
         <span id="notif-text">Usuária garantiu acesso há poucos minutos</span>
       </div>
 
+      <!-- Timer -->
       <div class="timer-box">
         ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
       </div>
 
+      <!-- Botão de Ação -->
+      <div style="text-align: center; margin: 30px 0;">
+        <a href="https://seusite.com/checkout?utm_source=lp&utm_medium=botao&utm_campaign=desafio30dias" 
+           class="cta-button">
+          GARANTIR MEU PLANO AGORA 💚
+        </a>
+      </div>
+
+      <!-- Conteúdo -->
       <section class="intro" aria-label="introdução">
         <h2>Você recebe:</h2>
         <p>📘 Ebook com plano funcional de 30 dias<br>
@@ -143,7 +170,7 @@
       *Este conteúdo tem fins informativos. Consulte especialistas para suporte individual.
     </footer>
 
-    <!-- Pixel Invisível para cloaking -->
+    <!-- Pixel invisível de cloaking -->
     <img src="https://seu-cloak.com/track.gif?lead=true" width="1" height="1" style="display:none;" alt="">
 
   </main>
@@ -168,7 +195,7 @@
     }
     updateCountdown();
 
-    // Geolocalização fake notificação
+    // Notificação com IP real
     fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(data => {
@@ -177,7 +204,7 @@
         document.getElementById("notif").style.display = "block";
       });
 
-    // Cloaking visual (anti-bot)
+    // Cloaking para bots
     const isBot = /bot|crawler|spider|crawling/i.test(navigator.userAgent);
     if (isBot) {
       document.body.innerHTML = '<h1>Conteúdo indisponível no momento.</h1>';

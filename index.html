@@ -1,214 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desafio 30 Dias Funcional</title>
-  <link rel="icon" href="https://seucdn.com/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <meta name="description" content="Plano natural para transformar sua rotina em 30 dias, sem loucura, sem promessas vazias.">
-  <meta property="og:title" content="Desafio 30 Dias Funcional">
-  <meta property="og:description" content="Plano funcional que já ajudou +12 mil mulheres. Descubra como aplicar em casa.">
-  <meta property="og:image" content="https://seucdn.com/banner-og.jpg">
-  <meta property="og:url" content="https://seusite.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://seucdn.com/banner-og.jpg">
-
+  <title>Desafio 30 Dias - Emagreça em Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main: #c8beb5;
-      --accent-red: #e74c3c;
-      --accent-green: #27ae60;
-    }
-    body {
+    * {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #fff;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f2f4f8;
       color: #333;
       line-height: 1.6;
     }
+
     header {
-      background-color: var(--accent-green);
+      background: linear-gradient(90deg, #00c9a7, #92fe9d);
       color: #fff;
       padding: 40px 20px;
       text-align: center;
-      border-radius: 0 0 20px 20px;
     }
-    header h1, header p {
-      color: #fff;
-      margin: 0 0 10px;
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
-    main, section, footer {
-      padding: 20px;
+
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 40px 20px;
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
     }
-    h2, h3 {
-      color: #222;
-    }
-    .container {
-      padding: 20px;
-    }
-    .timer-box {
-      background: #f9e79f;
-      padding: 10px;
-      border-radius: 6px;
-      margin: 20px 0;
-      text-align: center;
-      font-weight: bold;
-    }
-    #notif {
-      background: #fff3cd;
-      padding: 10px;
-      border-left: 5px solid #ffb347;
-      margin-bottom: 20px;
-      font-size: 14px;
-      display: none;
-    }
-    img {
-      max-width: 100%;
+
+    .benefits {
+      background: #fff;
       border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .benefits h2 {
+      font-size: 1.8em;
       margin-bottom: 20px;
+      color: #00c9a7;
     }
-    ul {
-      padding-left: 20px;
+
+    .benefits ul {
+      list-style: none;
     }
+
+    .benefits ul li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .benefits ul li::before {
+      content: '✔️';
+      position: absolute;
+      left: 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background: #00c9a7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #00b396;
+    }
+
+    .orderbump {
+      margin-top: 30px;
+      background: #e0fdf4;
+      padding: 20px;
+      border-left: 5px solid #00c9a7;
+      border-radius: 5px;
+    }
+
+    .orderbump h3 {
+      margin-bottom: 10px;
+    }
+
     footer {
       text-align: center;
-      font-size: 12px;
-      color: #888;
-    }
-    .cta-button {
-      display: inline-block;
-      background-color: var(--accent-green);
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 5px 10px rgba(39, 174, 96, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(39, 174, 96, 0.5);
+      font-size: 0.9em;
+      padding: 20px;
+      color: #777;
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <header>
-      <h1>Desafio 30 Dias Funcional</h1>
-      <p>Renove sua rotina com hábitos leves e naturais, no seu ritmo.</p>
-    </header>
 
-    <div class="container" data-aos="fade-up">
+  <header>
+    <h1>Desafio 30 Dias para Emagrecer</h1>
+    <p>Emagreça de forma saudável, com receitas detox e treinos práticos pra fazer em casa.</p>
+  </header>
 
-      <!-- Notificação dinâmica -->
-      <div id="notif">
-        <span id="notif-text">Usuária garantiu acesso há poucos minutos</span>
-      </div>
+  <section class="benefits">
+    <h2>O que você vai encontrar:</h2>
+    <ul>
+      <li>Plano completo de 30 dias para perder peso</li>
+      <li>Receitas detox fáceis de preparar</li>
+      <li>Treinos em casa com acompanhamento</li>
+      <li>Rápido, prático e sem enrolação</li>
+    </ul>
 
-      <!-- Timer -->
-      <div class="timer-box">
-        ⚡ Oferta especial disponível por tempo limitado: <span id="timer">05:00</span>
-      </div>
-
-      <!-- Botão de Ação -->
-      <div style="text-align: center; margin: 30px 0;">
-        <a href="https://seusite.com/checkout?utm_source=lp&utm_medium=botao&utm_campaign=desafio30dias" 
-           class="cta-button">
-          GARANTIR MEU PLANO AGORA 💚
-        </a>
-      </div>
-
-      <!-- Conteúdo -->
-      <section class="intro" aria-label="introdução">
-        <h2>Você recebe:</h2>
-        <p>📘 Ebook com plano funcional de 30 dias<br>
-           🏋️‍♀️ Rotina simples com práticas leves<br>
-           ✅ Estratégia natural pra renovar seu bem-estar</p>
-      </section>
-
-      <section class="benefits" aria-label="benefícios">
-        <h2>Benefícios</h2>
-        <ul>
-          <li>Resultados visíveis em poucos dias</li>
-          <li>Mais disposição sem suplementos artificiais</li>
-          <li>Corpo mais leve com práticas naturais</li>
-          <li>Pele e intestino em sintonia</li>
-          <li>Mais energia no dia a dia</li>
-          <li>Corpo mais equilibrado sem esforço</li>
-        </ul>
-      </section>
-
-      <section class="testimonials" aria-label="depoimentos">
-        <h2>Transformações reais</h2>
-        <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3707.jpeg" alt="Antes e depois Ana" loading="lazy">
-        <p>"Em 15 dias me senti mais leve e meu corpo respondeu muito bem!" – <strong>Ana, 29 anos</strong></p>
-        <p>"Não é milagre, mas me ajudou a destravar o que tava parado há meses." – <strong>Cláudia, 34 anos</strong></p>
-      </section>
-
-      <section class="order-bump" aria-label="bônus">
-        <h3>🎁 Bônus Profissional:</h3>
-        <img src="https://raw.githubusercontent.com/vidasaudavel1/saud-vel-/refs/heads/main/IMG_3709.jpeg" alt="Plano aprovado" loading="lazy" style="width: 100px;">
-        <p>Inclua o <strong>Plano Nutricional Complementar</strong> com cardápios ajustados, receitas extras e checklist saudável.</p>
-        <ul>
-          <li>Cardápio 100% alinhado ao ebook</li>
-          <li>Receitas anti-inchaço exclusivas</li>
-          <li>Checklist de hábitos saudáveis</li>
-          <li>Lista de mercado pronta pra imprimir</li>
-        </ul>
-      </section>
-
+    <div class="orderbump">
+      <h3>🔥 Order Bump Especial:</h3>
+      <p>Adicione o <strong>Plano Alimentar Personalizado</strong> por apenas alguns reais a mais e acelere seus resultados!</p>
     </div>
 
-    <footer>
-      *Este conteúdo tem fins informativos. Consulte especialistas para suporte individual.
-    </footer>
+    <div class="cta">
+      <a href="https://kirvano.com/checkout/SEULINKAQUI" target="_blank">Quero Emagrecer Agora!</a>
+    </div>
+  </section>
 
-    <!-- Pixel invisível de cloaking -->
-    <img src="https://seu-cloak.com/track.gif?lead=true" width="1" height="1" style="display:none;" alt="">
+  <footer>
+    © 2025 - Todos os direitos reservados. Esta página é apenas para fins educacionais.
+  </footer>
 
-  </main>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    // Timer looping
-    let timer = 300;
-    function updateCountdown() {
-      const minutes = Math.floor(timer / 60);
-      const seconds = timer % 60;
-      document.getElementById("timer").textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-      if (timer > 0) {
-        timer--;
-      } else {
-        timer = 300;
-      }
-      setTimeout(updateCountdown, 1000);
-    }
-    updateCountdown();
-
-    // Notificação com IP real
-    fetch('https://ipapi.co/json/')
-      .then(res => res.json())
-      .then(data => {
-        const cidade = data.city || "sua região";
-        document.getElementById("notif-text").innerText = `Usuária de ${cidade} garantiu acesso há ${Math.floor(Math.random()*3)+1} minutos`;
-        document.getElementById("notif").style.display = "block";
-      });
-
-    // Cloaking para bots
-    const isBot = /bot|crawler|spider|crawling/i.test(navigator.userAgent);
-    if (isBot) {
-      document.body.innerHTML = '<h1>Conteúdo indisponível no momento.</h1>';
-    }
-  </script>
 </body>
 </html>

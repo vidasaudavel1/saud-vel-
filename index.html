@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desafio 30 Dias - Emagreça em Casa</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
+    
+    fbq('init', '583516761472887'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=583516761472887&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
   <style>
     * {
       margin: 0;
@@ -73,6 +93,47 @@
       left: 0;
     }
 
+    .orderbump {
+      margin-top: 30px;
+      background: #e0fdf4;
+      padding: 20px;
+      border-left: 5px solid #00c9a7;
+      border-radius: 5px;
+    }
+
+    .orderbump h3 {
+      margin-bottom: 10px;
+    }
+
+    .promo {
+      background: #ffe9e3;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 1.1em;
+      color: #d64000;
+      font-weight: bold;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .countdown div {
+      background: #00c9a7;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      min-width: 60px;
+      text-align: center;
+    }
+
     .cta {
       text-align: center;
       margin-top: 40px;
@@ -91,18 +152,6 @@
 
     .cta a:hover {
       background: #00b396;
-    }
-
-    .orderbump {
-      margin-top: 30px;
-      background: #e0fdf4;
-      padding: 20px;
-      border-left: 5px solid #00c9a7;
-      border-radius: 5px;
-    }
-
-    .orderbump h3 {
-      margin-bottom: 10px;
     }
 
     footer {
@@ -134,14 +183,45 @@
       <p>Adicione o <strong>Plano Alimentar Personalizado</strong> por apenas alguns reais a mais e acelere seus resultados!</p>
     </div>
 
+    <div class="promo">
+      ⚡ Oferta por tempo limitado! Garanta sua vaga no desafio antes que o prazo acabe:
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div><span id="hours">00</span><br>h</div>
+      <div><span id="minutes">00</span><br>min</div>
+      <div><span id="seconds">00</span><br>s</div>
+    </div>
+
     <div class="cta">
-      <a href="https://kirvano.com/checkout/SEULINKAQUI" target="_blank">Quero Emagrecer Agora!</a>
+      <a href="https://pay.kirvano.com/c56a478d-6f5d-4359-84ac-e9feb07254c1" target="_blank">Quero Emagrecer Agora!</a>
     </div>
   </section>
 
   <footer>
     © 2025 - Todos os direitos reservados. Esta página é apenas para fins educacionais.
   </footer>
+
+  <script>
+    // Countdown até 23h59 de hoje
+    function updateCountdown() {
+      const now = new Date();
+      const deadline = new Date();
+      deadline.setHours(23, 59, 59, 999);
+
+      const total = deadline - now;
+      const seconds = Math.floor((total / 1000) % 60);
+      const minutes = Math.floor((total / 1000 / 60) % 60);
+      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
 </html>
